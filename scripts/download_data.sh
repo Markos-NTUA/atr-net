@@ -27,6 +27,7 @@ if [ ! -d "datasets" ]; then
 fi
 cd datasets
 
+if [[ "$*" == *VRD* ]]; then
 # Download VRD annotations (Lu et al. 2017)
 if [ ! -d "VRD" ]; then
     mkdir VRD
@@ -39,6 +40,9 @@ if [ ! -d "VRD" ]; then
     rm -r dataset
     cd ..
 fi
+fi
+cd ..
+exit
 
 # Download VG200 annotations (Xu et al. 2017)
 if [ ! -d "VG200" ]; then

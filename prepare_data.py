@@ -42,4 +42,5 @@ def main(datasets):
     print('Done.')
 
 if __name__ == "__main__":
-    main(['VG80K', 'sVG', 'VrR-VG', 'VGVTE', 'VGMSDN', 'VG200', 'VRD'])
+    #main(['VG80K', 'sVG', 'VrR-VG', 'VGVTE', 'VGMSDN', 'VG200', 'VRD'])
+    main(['VRD'])

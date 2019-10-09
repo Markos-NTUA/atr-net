@@ -1,3 +1,4 @@
+if [[ "$*" == *VG* ]]; then
 # Download VG images
 if [ ! -d "VG" ]; then
     mkdir VG
@@ -12,7 +13,9 @@ if [ ! -d "VG" ]; then
     mv VG_100K/ images/
     cd ..
 fi
+fi
 
+if [[ "$*" == *VRD* ]]; then
 # Download VRD images
 if [ ! -d "VRD" ]; then
     wget http://imagenet.stanford.edu/internal/jcjohns/scene_graphs/sg_dataset.zip
@@ -25,7 +28,9 @@ if [ ! -d "VRD" ]; then
     mv sg_dataset/sg_train_images/ sg_dataset/images/
     mv sg_dataset/ VRD/
 fi
+fi
 
+if [[ "$*" == *UnRel* ]]; then
 # Download UnRel images
 if [ ! -d "UnRel" ]; then
     mkdir UnRel
@@ -36,4 +41,5 @@ if [ ! -d "UnRel" ]; then
     rm annotations.mat
     rm annotatated_triplets.mat
     cd ..
+fi
 fi
