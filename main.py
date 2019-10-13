@@ -6,11 +6,13 @@ import argparse
 import _init_paths
 from config import Config
 from src.models import (
+    rel_net,
     atr_net,
     object_classifier, object_detector
 )
 
 MODELS = {
+    'rel_net': rel_net,
     'atr_net': atr_net,
     'object_classifier': object_classifier,
     'object_detector': object_detector
